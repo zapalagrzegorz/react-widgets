@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import { useDate } from "./useDate";
 const TIME_OPTIONS: Intl.DateTimeFormatOptions = {
   weekday: "long",
@@ -16,7 +15,7 @@ export default function Clock() {
     <article>
       <h2>Clock</h2>
       <div>
-        <p>
+        <p >
           <span>Time:</span> <span>{localTime}</span>
         </p>
         <p>
