@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-widgets/static/css/main.3db761ac.css",
+    "main.js": "/react-widgets/static/js/main.ef618a72.js",
+    "static/js/787.ceac80f5.chunk.js": "/react-widgets/static/js/787.ceac80f5.chunk.js",
+    "index.html": "/react-widgets/index.html",
+    "main.3db761ac.css.map": "/react-widgets/static/css/main.3db761ac.css.map",
+    "main.ef618a72.js.map": "/react-widgets/static/js/main.ef618a72.js.map",
+    "787.ceac80f5.chunk.js.map": "/react-widgets/static/js/787.ceac80f5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3db761ac.css",
+    "static/js/main.ef618a72.js"
+  ]
+}
