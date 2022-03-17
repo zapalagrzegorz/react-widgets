@@ -1,4 +1,28 @@
 .autocomplete {
-  max-height: 200px;
+  max-height: 300px;
   overflow-y: auto;
+}
+
+form {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.item-enter {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+.item-enter-active {
+  opacity: 1;
+  transform: scale(1);
+}
+.item-exit {
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+}
+.item-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
 }
