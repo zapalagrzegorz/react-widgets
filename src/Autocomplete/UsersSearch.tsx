@@ -5,23 +5,29 @@ import { UsersList } from "./UsersList";
 
 interface UsersSearchProps {
   users: User[];
-  fetchNextPeople: () => void;
+  onFetchNextPeople: () => void;
   isLoading: boolean;
 }
 export const UsersSearch = ({
   users,
-  fetchNextPeople,
+  onFetchNextPeople,
   isLoading,
 }: UsersSearchProps) => {
   const [searchName, setSearch] = useState("");
-  const onChangeSearch = (search: string) => {
-    setSearch(search);
-  };
   return (
     <>
-      <SearchBar searchName={searchName} onChangeSearch={onChangeSearch} />
+      <SearchBar
+        searchName={searchName}
+        onChangeSearch={(search: string) => {
+          setSearch(search);
+        }}
+      />
       <UsersList users={users} searchName={searchName} />
-      <button type="button" onClick={fetchNextPeople} disabled={isLoading}>
+      <button
+        type="button"
+        onClick={onFetchNextPeople}
+        disabled={isLoading}
+      >
         Load more people
       </button>
     </>

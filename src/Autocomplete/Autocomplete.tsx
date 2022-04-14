@@ -13,12 +13,12 @@ function App(): JSX.Element {
     <div>
       <h2>Autocomplete users API</h2>
       <div className="autocomplete">
-        {isError && <FetchAgain setFetchAgain={setFetchAgain} />}
+        {isError && <FetchAgain onFetchAgain={setFetchAgain} />}
         {isLoading && <p className="center">Loading...</p>}
         {users.length > 0 && (
           <UsersSearch
             users={users}
-            fetchNextPeople={() => setPageNum(pageNum + 1)}
+            onFetchNextPeople={() => setPageNum(pageNum + 1)}
             isLoading={isLoading}
           />
         )}

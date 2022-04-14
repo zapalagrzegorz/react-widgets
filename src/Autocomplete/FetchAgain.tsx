@@ -1,13 +1,13 @@
 import { Dispatch, SetStateAction } from "react";
 
 interface FetchAgainProps {
-  setFetchAgain: Dispatch<SetStateAction<boolean>>;
+  onFetchAgain: Dispatch<SetStateAction<boolean>>;
 }
-export const FetchAgain = ({ setFetchAgain }: FetchAgainProps) => {
+export const FetchAgain = ({ onFetchAgain }: FetchAgainProps) => {
   return (
     <div className="center">
       <h2>Something went wrong.</h2>
-      <button type="button" onClick={() => setFetchAgain(true)}>
+      <button type="button" onClick={() => onFetchAgain(true)}>
         Try again
       </button>
     </div>

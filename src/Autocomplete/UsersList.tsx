@@ -25,7 +25,7 @@ export const UsersList = ({ users, searchName }: UsersListProps) => {
 
   const usersToDisplay = search ? filterUsers({ users, search }) : users;
 
-  const userRows = (usersToDisplay: User[]) => {
+  const renderUserRows = (usersToDisplay: User[]) => {
     return usersToDisplay?.map((user) => {
       const { picture, name, email, location, login } = user;
       const title = name.title;
@@ -66,7 +66,7 @@ export const UsersList = ({ users, searchName }: UsersListProps) => {
       </thead>
       <tbody>
         <TransitionGroup component={null}>
-          {userRows(usersToDisplay)}
+          {renderUserRows(usersToDisplay)}
         </TransitionGroup>
       </tbody>
     </table>
